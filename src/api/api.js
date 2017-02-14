@@ -1,7 +1,7 @@
-var configSettings = require('./config.js');
-const FLICKR_API_KEY = configSettings.FLICKR_API_KEY;
-const SHUTTER_CLIENT_ID = configSettings.SHUTTER_CLIENT_ID;
-const SHUTTER_CLIENT_SECRET = configSettings.SHUTTER_CLIENT_SECRET;
+var config = require('./config.js');
+const FLICKR_API_KEY = config.FLICKR_API_KEY;
+const SHUTTER_CLIENT_ID = config.SHUTTER_CLIENT_ID;
+const SHUTTER_CLIENT_SECRET = config.SHUTTER_CLIENT_SECRET;
 
 // basic auth for accessing Shutterstock API
 const basicAuth = () => 'Basic '.concat(window.btoa('${SHUTTER_CLIENT_ID}:${SHUTTER_CLIENT_SECRET}'));

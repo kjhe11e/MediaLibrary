@@ -1,4 +1,4 @@
-var config = require('./config.js');
+var config = require('../../config');
 const FLICKR_API_KEY = config.FLICKR_API_KEY;
 const SHUTTER_CLIENT_ID = config.SHUTTER_CLIENT_ID;
 const SHUTTER_CLIENT_SECRET = config.SHUTTER_CLIENT_SECRET;

@@ -3,14 +3,15 @@ import createSagaMiddleware from 'redux-saga';
 import rootReducer from '../reducers';
 import rootSaga from '../sagas';
 
-// returns store instance.
-// this can also take initialState argument when provided.
+// return the store instance.
+// also accepts optional param 'initialState' argument when provided.
 const configureStore = () => {
-	const sagaMiddleware = createSagaMiddleware();
-	return {
-		...createStore(rootReducer, applyMiddleware(sagaMiddleware)),
-		runSaga: sagaMiddleware.run(rootSaga)
-	};
+  const sagaMiddleware = createSagaMiddleware();
+  return {
+    ...createStore(rootReducer,
+      applyMiddleware(sagaMiddleware)),
+    runSaga: sagaMiddleware.run(rootSaga)
+  };
 };
 
 export default configureStore;

@@ -4,5 +4,5 @@ import * as types from '../constants/actionTypes';
 
 // watches for SEARCH_MEDIA_REQUEST action type asynchronously.
 export default function* watchSearchMedia() {
-	yield* takeLatest(types.SEARCH_MEDIA_REQUEST, searchMediaSaga);
+  yield* takeLatest(types.SEARCH_MEDIA_REQUEST, searchMediaSaga);
 }
